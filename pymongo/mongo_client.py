@@ -217,6 +217,7 @@ class MongoClient(common.BaseObject):
             host = [host]
         if port is None:
             port = self.PORT
+        port = int(port)
         if not isinstance(port, int):
             raise TypeError("port must be an instance of int")
 
